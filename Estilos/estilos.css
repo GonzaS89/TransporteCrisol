@@ -1,0 +1,551 @@
+:root{
+    ---negro:black;
+    ---negro-claro:rgb(87, 87, 87);
+    ---blanco:white;
+    ---rojo:red;
+
+    ---fuente-principal: 'Nunito Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* Globales*/
+
+body{
+    font-family: var(---fuente-principal);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.9527027027027027) 70%, rgba(255,0,0,1) 100%);
+}
+
+@media (min-width:600px){
+    .body-scroll{
+        padding-top: 8rem;
+    }
+}
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.no-padding{
+    padding:0;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size:2.5rem;
+    text-transform:uppercase;
+}
+
+h3{
+    font-size:1.2rem;
+    text-transform:uppercase;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+
+.header-contenedor{
+    background: rgba(255, 43, 43, 0.459);
+    background: linear-gradient(90deg, rgba(255,255,255,0.9527027027027027) 70%, rgba(255,0,0,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 24px 5px -19px rgba(181,171,171,0.63);
+    -webkit-box-shadow: 1px 24px 5px -19px rgba(181,171,171,0.63);
+    -moz-box-shadow: 1px 24px 5px -19px rgba(181,171,171,0.63);
+    margin-bottom: 2rem;
+}
+
+.header-navegacion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+.enlace{
+    color:var(---negro);
+    font-weight: 700;
+    padding: .5rem 0;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.enlace:hover{
+    font-size: 2rem;
+    transition: font-size .3s ease;
+}
+
+@media (min-width:600px) {
+    .header-contenedor{
+       background: rgb(255,255,255);
+       background: linear-gradient(90deg, 
+       rgba(255,255,255,0.9527027027027027) 70%, 
+       rgba(255,0,0,1) 100%);
+       flex-direction: row;
+       justify-content: space-around;
+       left: 0;
+       top:0;
+    }
+
+    .fija{
+        position:fixed;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .header-navegacion{
+        width: auto;
+        flex-direction: row;
+        padding: 2rem 2rem 0 0;
+    }
+
+    .enlace{
+        padding: 0 .5rem;
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .resaltado{
+        font-size: 2rem;
+    }
+
+   
+}
+
+/* PORTADA */
+
+.portada{
+    display:flex;
+    align-items:flex-end;
+    padding: 0 2rem;
+}
+
+.portada-texto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 1.5rem 0 0 0;
+    
+}
+
+.portada-texto h4{
+    margin: 0;
+    padding: 1rem;
+    color: var(---blanco);
+    text-shadow: wheat;
+    font-size: 1rem;
+}
+
+
+.portada-imagen{
+    filter: brightness(40%);
+    width: 100%;
+}
+
+@media (min-width:600px) {
+    .portada-texto h4{
+        font-size:1.3rem;
+    }
+}
+
+@media (min-width:768px) {
+    .portada-texto h4{
+        font-size:1.8rem;
+    }
+}
+
+
+/* NOSOTROS */
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros h1{
+    text-align: center;
+}
+
+
+.nosotros-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;   
+}
+
+.nosotros-texto{
+    text-align: justify;    
+}
+
+@media (max-width:480px){
+    .nosotros-texto p{
+        font-size: 1.2rem;
+    }
+}
+
+.nosotros-texto span{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+}
+
+.serv-text{
+    background-color: red;
+    padding: 0 5px;
+    border-radius: 2rem;
+}
+
+.serv-text:hover{
+    cursor: pointer;
+    background-color: black;
+}
+.nosotros-img{
+    padding: 1rem 0;
+}
+
+
+@media (min-width:1100px) {
+    .nosotros-contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+        
+    }   
+
+    .nosotros-texto p{
+        font-size: 2rem;
+        line-height:1.5;
+    }
+}
+
+/* SERVICIO */
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.servicios-titulo{
+    text-align: center;
+}
+
+.servicios-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 1px 20px rgb(0, 0, 0);
+    width:20rem;
+    height: 20rem; 
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 3rem;
+}
+
+.servicio:hover{
+    background: rgb(251,63,63);
+    background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(70,32,32,1) 100%);
+    opacity:90%;
+}
+
+.servicio h3{
+    text-align: center;
+}
+
+.servicio-img{
+    background-color: black;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    border: .5rem solid var(---negro-claro);
+    
+}
+
+.servicio p{
+    text-align: center;  
+    font-size: 1.4rem;  
+}
+
+@media (min-width:600px){
+    .servicios-contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .servicio{
+        margin:0;
+    }
+}
+
+
+@media (min-width:1100px) {
+    .servicios-contenedor{
+       grid-template-columns: repeat(4,1fr);
+}
+}
+
+/* CALCULADORA */
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-calculadora{
+    text-align: center;
+}
+
+.calculadora h3{
+    text-align: center;
+}
+
+.cuerpo-calc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+
+#kgs{
+    height: 3rem;
+    width: 8rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#valor{
+    height: 3rem;
+    width: 8rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#btn2{
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    background-color:rgb(255, 56, 56);
+    color:white;
+    box-shadow: 0 2px 5px black;
+    margin: 2rem 0 0 0;
+}
+
+#btn2:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+}
+
+.resultado{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color:red;
+    color:white;
+    font-weight:bold;
+    height:5rem;
+    width:20rem;
+    border-radius:2rem;
+    text-shadow:2px 2px 2px rgb(0, 0, 0);;
+}
+
+.mensajeError{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 0, 0);
+    font-weight:bold;
+    height:7rem;
+    width:20rem;
+    border-radius:2rem;
+}
+
+@media(min-width:768px){
+    .resultado{
+        width: 50rem;
+    }
+    .mensajeError{
+        height: 5rem;
+        width:50rem;
+    }
+}
+
+/* CONTACTO */
+
+.contacto-contenedor{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem;
+}
+
+.contacto-titulo h1{
+    text-align: center;
+}
+
+.contacto-sucursales{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width:768px){
+    .contacto-sucursales{
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+    }
+}
+
+@media (min-width:1100px){
+    .contacto-sucursales{
+        justify-content:space-evenly;
+    }
+}
+
+.sucursal{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.sucursal-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sucursal-texto h3, p{
+    text-align:center;
+}
+
+.sucursal p{
+    font-size: 1rem;
+}
+
+@media (min-width:600px){
+    .sucursal p{
+        font-size: 1.5rem;
+    }
+}
+
+.sucursal-texto span{
+    font-weight:700;
+}
+
+.sucursal-ubicacion iframe{
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background-color: var(---negro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer h3{
+    color:var(---blanco);
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
