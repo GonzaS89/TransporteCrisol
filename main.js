@@ -127,7 +127,7 @@ function mostrarFlete(){
 
         if(valorIng == '' || valorIng == 0 ){
             
-            mensaje.textContent = `Ingrese un valor válido en el primer campo`;
+            mensaje.textContent = `El campo esta vacío o contine un valor incorrecto. Ingrese un valor válido`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
@@ -135,79 +135,79 @@ function mostrarFlete(){
          },3500)
         }
         else{
-            if(valorIng >=1 && valorIng <=10){
+            if(Math.floor(valorIng) >=1 && Math.floor(valorIng) <=10){
                 resul=490;
             }
-            if(valorIng >10 && valorIng <=20){
+            if(Math.floor(valorIng) >10 && Math.floor(valorIng) <=20){
                 resul=570;
             }
-            if(valorIng >20 && valorIng <=30){
+            if(Math.floor(valorIng) >20 && Math.floor(valorIng) <=30){
                 resul=780;
             }
-            if(valorIng >30 && valorIng <=40){
+            if(Math.floor(valorIng) >30 && Math.floor(valorIng) <=40){
                 resul=970;
             }
-            if(valorIng >40 && valorIng <=50){
+            if(Math.floor(valorIng) >40 && Math.floor(valorIng) <=50){
                 resul=1146
             }
-            if(valorIng >50 && valorIng <=60){
+            if(Math.floor(valorIng) >50 && Math.floor(valorIng) <=60){
                 resul=1310
             }
-            if(valorIng >60 && valorIng <=70){
+            if(Math.floor(valorIng) >60 && Math.floor(valorIng) <=70){
                 resul=1490
             }
-            if(valorIng >70 && valorIng <=80){
+            if(Math.floor(valorIng) >70 && Math.floor(valorIng) <=80){
                 resul=1630
             }
-            if(valorIng >80 && valorIng <=90){
+            if(Math.floor(valorIng) >80 && Math.floor(valorIng) <=90){
                 resul=1730
             }
-            if(valorIng >90 && valorIng <=100){
+            if(Math.floor(valorIng) >90 && Math.floor(valorIng) <=100){
                 resul=1854
             }
-            if(valorIng >100 && valorIng <=120){
+            if(Math.floor(valorIng) >100 && Math.floor(valorIng) <=120){
                 resul=2105
             }
-            if(valorIng >120 && valorIng <=140){
+            if(Math.floor(valorIng) >120 && Math.floor(valorIng) <=140){
                 resul=2345
             }
-            if(valorIng >140 && valorIng <=150){
+            if(Math.floor(valorIng) >140 && Math.floor(valorIng) <=150){
                 resul=2598
             }
-            if(valorIng >150 && valorIng <=160){
+            if(Math.floor(valorIng) >150 && Math.floor(valorIng) <=160){
                 resul=2850
             }
-            if(valorIng >180 && valorIng <=200){
+            if(Math.floor(valorIng) >180 && Math.floor(valorIng) <=200){
                 resul=3075
             }
-            if(valorIng >200 && valorIng <=250){
+            if(Math.floor(valorIng) >200 && Math.floor(valorIng) <=250){
                 resul=3692
             }
-            if(valorIng >250 && valorIng <=300){
+            if(Math.floor(valorIng) >250 && Math.floor(valorIng) <=300){
                 resul=4124
             }
-            if(valorIng >300 && valorIng <=350){
+            if(Math.floor(valorIng) >300 && Math.floor(valorIng) <=350){
                 resul=4690
             }
-            if(valorIng >350 && valorIng <=400){
+            if(Math.floor(valorIng) >350 && Math.floor(valorIng) <=400){
                 resul=5292
             }
-            if(valorIng >400 && valorIng <=500){
+            if(Math.floor(valorIng) >400 && Math.floor(valorIng) <=500){
                 resul=6446
             }
-            if(valorIng >500 && valorIng <=600){
+            if(Math.floor(valorIng) >500 && Math.floor(valorIng) <=600){
                 resul=7622
             }
-            if(valorIng >600 && valorIng <=700){
+            if(Math.floor(valorIng) >600 && Math.floor(valorIng) <=700){
                 resul=8407
             }
-            if(valorIng >700 && valorIng <=800){
+            if(Math.floor(valorIng) >700 && Math.floor(valorIng) <=800){
                 resul=9536
             }
-            if(valorIng >800 && valorIng <=900){
+            if(Math.floor(valorIng) >800 && Math.floor(valorIng) <=900){
                 resul=10178
             }
-            if(valorIng >900 && valorIng <=1000){
+            if(Math.floor(valorIng) >900 && Math.floor(valorIng) <=1000){
                 resul=11300
             }
             
