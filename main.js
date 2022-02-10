@@ -125,9 +125,9 @@ function mostrarFlete(){
         let envioTotal;
         const mensaje = document.createElement('p');
 
-        if(valorIng == '' || valorIng == 0 ){
+        if(valorIng == '' || valorIng == 0 || valorIng >1000){
             
-            mensaje.textContent = `El campo esta vacío o contine un valor incorrecto. Ingrese un valor válido`;
+            mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
@@ -223,8 +223,9 @@ function mostrarFlete(){
             else{
                 resulSeg=valorIngresoVd*0.008;
                 envioTotal= resul + resulSeg;
+                totalRed=envioTotal.toFixed(2);
     
-                mensaje.textContent = `El valor de tu envío es de $${envioTotal} más IVA`;
+                mensaje.textContent = `El valor de tu envío es de $${totalRed} más IVA`;
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
@@ -232,9 +233,6 @@ function mostrarFlete(){
              },5000)
             }
             
-            }
-                     
+            }        
     });
-
-   
 }
