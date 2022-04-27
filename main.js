@@ -135,80 +135,80 @@ function mostrarFlete(){
          },3500)
         }
         else{
-            if(Math.floor(valorIng) >=1 && Math.floor(valorIng) <=10){
-                resul=490;
+            if(Math.ceil(valorIng) >=1 && valorIng <= 10){
+                resul=642;
             }
-            if(Math.floor(valorIng) >10 && Math.floor(valorIng) <=20){
-                resul=570;
+            if(Math.ceil(valorIng) >10 && valorIng <=20){
+                resul=756;
             }
-            if(Math.floor(valorIng) >20 && Math.floor(valorIng) <=30){
-                resul=780;
+            if(Math.ceil(valorIng) >20 && valorIng <=30){
+                resul=1022;
             }
-            if(Math.floor(valorIng) >30 && Math.floor(valorIng) <=40){
-                resul=970;
+            if(Math.ceil(valorIng) >30 && valorIng <=40){
+                resul=1271;
             }
-            if(Math.floor(valorIng) >40 && Math.floor(valorIng) <=50){
-                resul=1146
+            if(Math.ceil(valorIng) >40 && valorIng <=50){
+                resul=1501;
             }
-            if(Math.floor(valorIng) >50 && Math.floor(valorIng) <=60){
-                resul=1310
+            if(Math.ceil(valorIng) >50 && valorIng <=60){
+                resul=1716;
             }
-            if(Math.floor(valorIng) >60 && Math.floor(valorIng) <=70){
-                resul=1490
+            if(Math.ceil(valorIng) >60 && valorIng <=70){
+                resul=1952;
             }
-            if(Math.floor(valorIng) >70 && Math.floor(valorIng) <=80){
-                resul=1630
+            if(Math.ceil(valorIng) >70 && valorIng <=80){
+                resul=2135;
             }
-            if(Math.floor(valorIng) >80 && Math.floor(valorIng) <=90){
-                resul=1730
+            if(Math.ceil(valorIng) >80 && valorIng <=90){
+                resul=2266;
             }
-            if(Math.floor(valorIng) >90 && Math.floor(valorIng) <=100){
-                resul=1854
+            if(Math.ceil(valorIng) >90 && valorIng <=100){
+                resul=2429;
             }
-            if(Math.floor(valorIng) >100 && Math.floor(valorIng) <=120){
-                resul=2105
+            if(Math.ceil(valorIng) >100 && valorIng <=120){
+                resul=2757;
             }
-            if(Math.floor(valorIng) >120 && Math.floor(valorIng) <=140){
-                resul=2345
+            if(Math.ceil(valorIng) >120 && valorIng <=140){
+                resul=3072;
             }
-            if(Math.floor(valorIng) >140 && Math.floor(valorIng) <=150){
-                resul=2598
+            if(Math.ceil(valorIng) >140 && valorIng <=150){
+                resul=3403;
             }
-            if(Math.floor(valorIng) >150 && Math.floor(valorIng) <=160){
-                resul=2850
+            if(Math.ceil(valorIng) >150 && valorIng <=160){
+                resul=3733;
             }
-            if(Math.floor(valorIng) >180 && Math.floor(valorIng) <=200){
-                resul=3075
+            if(Math.ceil(valorIng) >180 && valorIng <=200){
+                resul=4028;
             }
-            if(Math.floor(valorIng) >200 && Math.floor(valorIng) <=250){
-                resul=3692
+            if(Math.ceil(valorIng) >200 && valorIng <=250){
+                resul=4836;
             }
-            if(Math.floor(valorIng) >250 && Math.floor(valorIng) <=300){
-                resul=4124
+            if(Math.ceil(valorIng) >250 && valorIng <=300){
+                resul=5402;
             }
-            if(Math.floor(valorIng) >300 && Math.floor(valorIng) <=350){
-                resul=4690
+            if(Math.ceil(valorIng) >300 && valorIng <=350){
+                resul=6144;
             }
-            if(Math.floor(valorIng) >350 && Math.floor(valorIng) <=400){
-                resul=5292
+            if(Math.ceil(valorIng) >350 && valorIng <=400){
+                resul=6932;
             }
-            if(Math.floor(valorIng) >400 && Math.floor(valorIng) <=500){
-                resul=6446
+            if(Math.ceil(valorIng) >400 && valorIng <=500){
+                resul=8444;
             }
-            if(Math.floor(valorIng) >500 && Math.floor(valorIng) <=600){
-                resul=7622
+            if(Math.ceil(valorIng) >500 && valorIng <=600){
+                resul=9985;
             }
-            if(Math.floor(valorIng) >600 && Math.floor(valorIng) <=700){
-                resul=8407
+            if(Math.ceil(valorIng) >600 && valorIng <=700){
+                resul=11013;
             }
-            if(Math.floor(valorIng) >700 && Math.floor(valorIng) <=800){
-                resul=9536
+            if(Math.ceil(valorIng) >700 && valorIng <=800){
+                resul=12492;
             }
-            if(Math.floor(valorIng) >800 && Math.floor(valorIng) <=900){
-                resul=10178
+            if(Math.ceil(valorIng) >800 && valorIng <=900){
+                resul=13333;
             }
-            if(Math.floor(valorIng) >900 && Math.floor(valorIng) <=1000){
-                resul=11300
+            if(Math.ceil(valorIng) >900 && valorIng <=1000){
+                resul=14803;
             }
             
             if(valorIngresoVd == '' || valorIngresoVd < 1000){
