@@ -112,8 +112,6 @@ function resaltarEnlaceActivo(){
 function mostrarFlete(){
     const boton = document.getElementById('btn2');
 
-        
-      
     boton.addEventListener('click', function(){
         const calculadora = document.querySelector('.calculadora');
         const ingreso = document.getElementById('kgs');
@@ -229,7 +227,7 @@ function mostrarFlete(){
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove();
+                mensaje.remove(), ingreso.value = "", ingresoVd.value = "";
              },5000)
             }
             
