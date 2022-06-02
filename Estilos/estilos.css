@@ -280,12 +280,6 @@ p{
     border-radius: 3rem;
 }
 
-.servicio:hover{
-    background: rgb(251,63,63);
-    background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(70,32,32,1) 100%);
-    opacity:90%;
-}
-
 .servicio h3{
     text-align: center;
 }
