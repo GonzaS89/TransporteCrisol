@@ -227,7 +227,7 @@ function mostrarFlete(){
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove();
+                mensaje.remove(); ingreso.value = '', ingresoVd.value = '';
              },5000)
             }
             
