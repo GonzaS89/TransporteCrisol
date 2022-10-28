@@ -129,7 +129,7 @@ function mostrarFlete(){
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
-            mensaje.remove();
+            mensaje.remove(); ingreso.value = '';
          },3500)
         }
         else{
@@ -214,7 +214,7 @@ function mostrarFlete(){
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove();
+                mensaje.remove(); ingresoVd.value = '';
                 },3500)  
             }
 
