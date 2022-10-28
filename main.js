@@ -223,7 +223,7 @@ function mostrarFlete(){
                 envioTotal= resul + resulSeg;
                 totalRed=envioTotal.toFixed(2);
     
-                mensaje.textContent = `El valor de tu envío es de $${totalRed} más IVA`;
+                mensaje.textContent = `El valor de tu envío es de $${totalRed} + IVA`;
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
