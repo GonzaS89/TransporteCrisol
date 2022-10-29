@@ -495,6 +495,16 @@ p{
     width: 100%;
 }
 
+/* LOGO WARAP */
+
+.cont-logo{
+    display: flex;
+    justify-content: end;
+}
+.logo{
+    width:5rem;
+    margin: 0 1rem 1rem 0;
+}
 
 /* FOOTER */
 
