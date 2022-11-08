@@ -46,6 +46,25 @@ function navegacionFija(){
 });
 };
 
+/* BARRA SMALL */
+
+function barraSmall(){
+
+    window.addEventListener('scroll', function(){
+        const barra = document.querySelector('.header-contenedor');
+        const body = document.querySelector('body');
+        const logo = document.querySelector('.header-logo')
+
+        if (barra.getBoundingClientRect().bottom >= 0){
+            logo.classList.add('fija');
+            body.classList.add('body-scroll')
+        }
+});
+}
+
+
+
+
 function resaltarEnlaceActivo(){
 
     window.addEventListener('scroll', function(){
@@ -203,7 +222,7 @@ function mostrarFlete(){
                 resul=15240.10;
             }
             if(Math.ceil(valorIng) >800 && valorIng <=900){
-                resul=16266.20;
+                resul=16266,20;
             }
             if(Math.ceil(valorIng) >900 && valorIng < 1000){
                 resul=18059.60;
@@ -223,7 +242,7 @@ function mostrarFlete(){
                 envioTotal= resul + resulSeg;
                 totalRed=envioTotal.toFixed(2);
     
-                mensaje.textContent = `El valor de tu envío es de $${totalRed} + IVA`;
+                mensaje.textContent = `El valor de tu envío es de $${totalRed} + impuestos`;
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
