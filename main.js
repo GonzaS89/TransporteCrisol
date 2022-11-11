@@ -72,9 +72,6 @@ function barraSmall(){
 });
 }
 
-
-
-
 function resaltarEnlaceActivo(){
 
     window.addEventListener('scroll', function(){
@@ -238,17 +235,23 @@ function mostrarFlete(){
                 resul=21671.50;
             }
             
-            if(valorIngresoVd == '' || valorIngresoVd < 1000){
-                mensaje.textContent = `Ingrese un valor válido en el segundo campo o un valor mayor a $ 1.000`;
+            if(valorIngresoVd == ''){
+                mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
                 mensaje.remove(); ingresoVd.value = '';
-                },3500)  
-            }
+                },3500); 
+            }    
+
+            if (valorIngresoVd < 1000){
+                resulSeg = 8;
+            }    
+            
 
             else{
                 resulSeg=valorIngresoVd*0.008;
+            }
                 envioTotal= resul + resulSeg;
                 totalRed=envioTotal.toFixed(2);
     
@@ -259,7 +262,6 @@ function mostrarFlete(){
                 mensaje.remove(); ingreso.value = '', ingresoVd.value = '';
              },5000)
             }
-            
-            }        
+                          
     });
 }
