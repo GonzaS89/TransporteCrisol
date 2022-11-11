@@ -252,7 +252,7 @@ function mostrarFlete(){
                 envioTotal= resul + resulSeg;
                 totalRed=envioTotal.toFixed(2);
     
-                mensaje.textContent = `El valor de tu envío es de $${totalRed} + impuestos`;
+                mensaje.textContent = `El valor de tu envío sería de $${totalRed} + impuestos`;
                 mensaje.classList.add('resultado');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
