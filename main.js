@@ -69,9 +69,6 @@ function barraSmall(){
             logo.classList.remove('fija-2');
             logo.classList.remove('logo-barraSmall');
         }    
-        
-
-      
 });
 }
 
@@ -166,79 +163,79 @@ function mostrarFlete(){
         }
         else{
             if(Math.ceil(valorIng) >=1 && valorIng <= 10){
-                resul=783,20;
+                resul=939.90;
             }
             if(Math.ceil(valorIng) >10 && valorIng <=20){
-                resul=922,30;
+                resul=1106.80;
             }
             if(Math.ceil(valorIng) >20 && valorIng <=30){
-                resul=1246,80;
+                resul=1496.20;
             }
             if(Math.ceil(valorIng) >30 && valorIng <=40){
-                resul=1550,60;
+                resul=1860.70;
             }
             if(Math.ceil(valorIng) >40 && valorIng <=50){
-                resul=1831.20;
+                resul=2197.40;
             }
             if(Math.ceil(valorIng) >50 && valorIng <=60){
-                resul=2093.50;
+                resul=2512.20;
             }
             if(Math.ceil(valorIng) >60 && valorIng <=70){
-                resul=2381.40;
+                resul=2857.70;
             }
             if(Math.ceil(valorIng) >70 && valorIng <=80){
-                resul=2604.70;
+                resul=3125.60;
             }
             if(Math.ceil(valorIng) >80 && valorIng <=90){
-                resul=2764.50;
+                resul=3317.40;
             }
             if(Math.ceil(valorIng) >90 && valorIng <=100){
-                resul=2963.30;
+                resul=3556.00;
             }
             if(Math.ceil(valorIng) >100 && valorIng <=120){
-                resul=3363.50;
+                resul=4036.20;
             }
             if(Math.ceil(valorIng) >120 && valorIng <=140){
-                resul=3747.80;
+                resul=4497.40;
             }
             if(Math.ceil(valorIng) >140 && valorIng <=160){
-                resul=4151.60;
+                resul=4891.60;
             }
             if(Math.ceil(valorIng) >160 && valorIng <=180){
-                resul=4554.20;
+                resul=5465.00;
             }
             if(Math.ceil(valorIng) >180 && valorIng <=200){
-                resul=4914.10;
+                resul=5896.90;
             }
             if(Math.ceil(valorIng) >200 && valorIng <=250){
-                resul=5899.90;
+                resul=7079.90;
             }
             if(Math.ceil(valorIng) >250 && valorIng <=300){
-                resul=6590.40;
+                resul=7908.50;
             }
             if(Math.ceil(valorIng) >300 && valorIng <=350){
-                resul=7495.70;
+                resul=8994.80;
             }
             if(Math.ceil(valorIng) >350 && valorIng <=400){
-                resul=8457;
+                resul=10148.40;
             }
             if(Math.ceil(valorIng) >400 && valorIng <=500){
-                resul=10301.70;
+                resul=12362.10;
             }
             if(Math.ceil(valorIng) >500 && valorIng <=600){
-                resul=12181.70;
+                resul=14618.10;
             }
             if(Math.ceil(valorIng) >600 && valorIng <=700){
-                resul=13435.80;
+                resul=16122.90;
             }
             if(Math.ceil(valorIng) >700 && valorIng <=800){
-                resul=15240.10;
+                resul=18288.10;
             }
             if(Math.ceil(valorIng) >800 && valorIng <=900){
-                resul=16266,20;
+                resul=19519.40;
             }
             if(Math.ceil(valorIng) >900 && valorIng < 1000){
-                resul=18059.60;
+                resul=21671.50;
             }
             
             if(valorIngresoVd == '' || valorIngresoVd < 1000){
