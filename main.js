@@ -7,6 +7,7 @@ function iniciarApp(){
     navegacionFija();
     resaltarEnlaceActivo();
     mostrarFlete();
+    barraSmall();
 };
 
 function scrollNav(){
@@ -36,7 +37,7 @@ function navegacionFija(){
 
    if (barra.getBoundingClientRect().bottom >= 0){
         barra.classList.add('fija');
-        body.classList.add('body-scroll')
+        body.classList.add('body-scroll');
     }
     else{
         barra.classList.remove('fija');
@@ -51,14 +52,26 @@ function navegacionFija(){
 function barraSmall(){
 
     window.addEventListener('scroll', function(){
+
         const barra = document.querySelector('.header-contenedor');
         const body = document.querySelector('body');
-        const logo = document.querySelector('.header-logo')
+        const logo = document.querySelector('.header-logo');
 
-        if (barra.getBoundingClientRect().bottom >= 0){
-            logo.classList.add('fija');
-            body.classList.add('body-scroll')
-        }
+        if (body.getBoundingClientRect().right < 800 &  
+           barra.getBoundingClientRect().bottom < 0) {
+
+            logo.classList.add('fija-2');
+            logo.classList.add('logo-barraSmall')
+            console.log(11)
+           }
+
+        else{
+            logo.classList.remove('fija-2');
+            logo.classList.remove('logo-barraSmall');
+        }    
+        
+
+      
 });
 }
 

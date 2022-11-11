@@ -22,6 +22,8 @@ body{
     background: linear-gradient(90deg, rgba(255,255,255,0.9527027027027027) 70%, rgba(255,0,0,1) 100%);
 }
 
+
+
 @media (min-width:600px){
     .body-scroll{
         padding-top: 8rem;
@@ -80,11 +82,27 @@ p{
     margin-bottom: 2rem;
 }
 
+
+.logo-barraSmall{
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 43, 43, 0.459);
+    background: linear-gradient(90deg, rgba(255,255,255,0.9527027027027027) 70%, rgba(255,0,0,1) 100%);
+}
+
+
+
 .header-navegacion{
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+.fija-2{
+    position:fixed;
+    z-index: 10;
     width: 100%;
 }
 
@@ -101,6 +119,7 @@ p{
     font-size: 2rem;
     transition: font-size .3s ease;
 }
+
 
 
 @media (min-width:600px) {
@@ -120,8 +139,6 @@ p{
         z-index: 10;
         width: 100%;
     }
-
-    
 
     .header-navegacion{
         width: auto;
