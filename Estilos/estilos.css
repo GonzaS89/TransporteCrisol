@@ -23,7 +23,6 @@ body{
 }
 
 
-
 @media (min-width:768px){
     .body-scroll{
         padding-top: 8rem;
@@ -100,16 +99,26 @@ p{
 .header-navegacion{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     padding: 1rem 0 1rem 0;
     width: 100%;
 }
+
+.navegacionSmall{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}   
 
 .fija-2{
     position:fixed;
     z-index: 15;
     width: 100%;
 }
+
+
 
 .enlace{
     color:var(---negro);

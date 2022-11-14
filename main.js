@@ -56,21 +56,27 @@ function barraSmall(){
         const barra = document.querySelector('.header-contenedor');
         const body = document.querySelector('body');
         const logo = document.querySelector('.header-logo');
+        
+        
 
         if (body.getBoundingClientRect().right < 800 &  
            barra.getBoundingClientRect().bottom < 0) {
 
             logo.classList.add('fija-2');
-            logo.classList.add('logo-barraSmall')
-            console.log(11)
+            logo.classList.add('logo-barraSmall');
+                   
+            
            }
 
         else{
             logo.classList.remove('fija-2');
             logo.classList.remove('logo-barraSmall');
+            
+
         }    
 });
 }
+
 
 function resaltarEnlaceActivo(){
 
@@ -133,7 +139,7 @@ function resaltarEnlaceActivo(){
            }
     });
 });
-};
+}
 
 function mostrarFlete(){
     const boton = document.getElementById('btn2');
@@ -149,14 +155,14 @@ function mostrarFlete(){
         let envioTotal;
         const mensaje = document.createElement('p');
 
-        if(valorIng == '' || valorIng == 0 || valorIng >1000){
+        if(valorIng == ' ' || valorIng == 0 || valorIng >1000){
             
             mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
             mensaje.remove(); ingreso.value = '';
-         },3500)
+             },3500)
         }
         else{
             if(Math.ceil(valorIng) >=1 && valorIng <= 10){
@@ -234,34 +240,62 @@ function mostrarFlete(){
             if(Math.ceil(valorIng) >900 && valorIng < 1000){
                 resul=21671.50;
             }
+        
             
-            if(valorIngresoVd == ''){
+            if(valorIngresoVd == '' || valorIngresoVd == 0){
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
                 mensaje.remove(); ingresoVd.value = '';
                 },3500); 
-            }    
-
-            if (valorIngresoVd < 1000){
-                resulSeg = 8;
-            }    
+            }
             
+        
 
             else{
                 resulSeg=valorIngresoVd*0.008;
+
+                if(resulSeg < 8){
+                    resulSeg = 8;
+
+                    envioTotal= resul + resulSeg;
+                        totalRed=envioTotal.toFixed(2);
+            
+                        mensaje.textContent = `El valor de tu envío sería de $${totalRed} + impuestos`;
+                        mensaje.classList.add('resultado');
+                        calculadora.appendChild(mensaje);
+                        setTimeout(() => {
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '';
+                     },5000)
+                
+                }
+
+                    else{
+                        envioTotal= resul + resulSeg;
+                        totalRed=envioTotal.toFixed(2);
+            
+                        mensaje.textContent = `El valor de tu envío sería de $${totalRed} + impuestos`;
+                        mensaje.classList.add('resultado');
+                        calculadora.appendChild(mensaje);
+                        setTimeout(() => {
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '';
+                     },5000)
+        
+                    }
             }
-                envioTotal= resul + resulSeg;
-                totalRed=envioTotal.toFixed(2);
-    
-                mensaje.textContent = `El valor de tu envío sería de $${totalRed} + impuestos`;
-                mensaje.classList.add('resultado');
-                calculadora.appendChild(mensaje);
-                setTimeout(() => {
-                mensaje.remove(); ingreso.value = '', ingresoVd.value = '';
-             },5000)
-            }
+        }
+            
+            
                           
     });
 }
+
+ /* MOSTRAR SECCIONES EN BARRA SMALL*/
+
+ 
+
+
+
+
+
