@@ -252,12 +252,13 @@ function mostrarFlete(){
             if(valorIngresoVd == '' || valorIngresoVd == 0){
                 
                 boton.disabled=true;
+                boton1.classList.add('botonGris');
 
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false;
+                mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris');;
                 },3500); 
             }
             
@@ -270,6 +271,7 @@ function mostrarFlete(){
                     resulSeg = 8;
 
                         boton.disabled=true;
+                        boton1.classList.add('botonGris');
 
                         envioTotal= resul + resulSeg;
                         totalRed=envioTotal.toFixed(2);
@@ -278,7 +280,7 @@ function mostrarFlete(){
                         mensaje.classList.add('resultado');
                         calculadora.appendChild(mensaje);
                         setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false;
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
                 
                 }
@@ -288,12 +290,13 @@ function mostrarFlete(){
                         totalRed=envioTotal.toFixed(2);
 
                         boton.disabled=true;
+                        boton1.classList.add('botonGris');
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
                         calculadora.appendChild(mensaje);
                         setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false;
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
         
                     }
