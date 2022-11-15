@@ -141,6 +141,7 @@ function resaltarEnlaceActivo(){
 function mostrarFlete(){
     const boton = document.getElementById('btn2');
 
+
     boton.addEventListener('click', function(){
         const calculadora = document.querySelector('.calculadora');
         const ingreso = document.getElementById('kgs');
@@ -151,18 +152,23 @@ function mostrarFlete(){
         let resulSeg;
         let envioTotal;
         const mensaje = document.createElement('p');
-        const botonOff = boton.disabled =true;
-        const botonOn = boton.disabled=false;
+        const boton1 = document.querySelector('.boton')
+        
+
 
         if(valorIng == ' ' || valorIng == 0 || valorIng >= 1000){
 
-            botonOff;
+            boton.disabled = true;
+            boton1.classList.add('botonGris');
+            
+            
+            
             
             mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
-            mensaje.remove(),botonOn;
+            mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris');
              },3500)
         }
         else{
@@ -244,12 +250,14 @@ function mostrarFlete(){
         
             
             if(valorIngresoVd == '' || valorIngresoVd == 0){
-                botonOff;
+                
+                boton.disabled=true;
+
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),botonOn;
+                mensaje.remove(),boton.disabled=false;
                 },3500); 
             }
             
@@ -261,19 +269,8 @@ function mostrarFlete(){
                 if(resulSeg < 8){
                     resulSeg = 8;
 
-                    envioTotal= resul + resulSeg;
-                        totalRed=envioTotal.toFixed(2);
-            
-                        mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
-                        mensaje.classList.add('resultado');
-                        calculadora.appendChild(mensaje);
-                        setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',botonOn;
-                     },5000)
-                
-                }
+                        boton.disabled=true;
 
-                    else{
                         envioTotal= resul + resulSeg;
                         totalRed=envioTotal.toFixed(2);
             
@@ -281,7 +278,22 @@ function mostrarFlete(){
                         mensaje.classList.add('resultado');
                         calculadora.appendChild(mensaje);
                         setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',botonOn;
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false;
+                     },5000)
+                
+                }
+
+                    else{
+                        envioTotal= resul + resulSeg;
+                        totalRed=envioTotal.toFixed(2);
+
+                        boton.disabled=true;
+            
+                        mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
+                        mensaje.classList.add('resultado');
+                        calculadora.appendChild(mensaje);
+                        setTimeout(() => {
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false;
                      },5000)
         
                     }
