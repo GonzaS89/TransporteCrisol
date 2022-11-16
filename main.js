@@ -8,6 +8,7 @@ function iniciarApp(){
     resaltarEnlaceActivo();
     mostrarFlete();
     barraSmall();
+    carrousel();
 };
 
 function scrollNav(){
@@ -58,18 +59,16 @@ function barraSmall(){
         const logo = document.querySelector('.header-logo');
 
         if (body.getBoundingClientRect().right < 800 &  
-           barra.getBoundingClientRect().bottom < 160) {
+             barra.getBoundingClientRect().bottom < 160) {
 
-            logo.classList.add('fija-2');
-            logo.classList.add('logo-barraSmall');
+             logo.classList.add('fija-2');
+             logo.classList.add('logo-barraSmall');
                 
            }
 
         else{
-
             logo.classList.remove('fija-2');
             logo.classList.remove('logo-barraSmall');
-            
         }    
 });
 }
@@ -153,16 +152,11 @@ function mostrarFlete(){
         let envioTotal;
         const mensaje = document.createElement('p');
         const boton1 = document.querySelector('.boton')
-        
-
 
         if(valorIng == ' ' || valorIng == 0 || valorIng >= 1000){
 
             boton.disabled = true;
             boton1.classList.add('botonGris');
-            
-            
-            
             
             mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
@@ -258,12 +252,10 @@ function mostrarFlete(){
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris');;
+                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris');
                 },3500); 
             }
             
-        
-
             else{
                 resulSeg=valorIngresoVd*0.008;
 
@@ -302,17 +294,57 @@ function mostrarFlete(){
                     }
             }
         }
-            
-            
-                          
     });
 }
 
- /* MOSTRAR SECCIONES EN BARRA SMALL*/
+ /* CARROUSEL DE IMAGENES*/
+
+ function carrousel(){
+
+    window.onload = function(){
+
+        const imagenes = [
+            'Imagenes/carrousel1.png',
+            'Imagenes/carrousel2.png',
+            'Imagenes/carrousel3.png'
+        ];
+
+        let posicionActual = 0;
+        let imagen = document.querySelector('#imagen');
+        let intervalo;
+        const timeIntervalo = 5000;
+        const body = document.querySelector('body');
+
+        body.addEventListener('click', playIntervalo());
+
+        function cargarImagen(){
+
+            imagen.style.backgroundImage = `url(${imagenes[posicionActual]})`;
+        }
+
+        function pasarFoto() {
+            if(posicionActual >= imagenes.length - 1) {
+                posicionActual = 0;
+            } else {
+                posicionActual++;
+            }
+            cargarImagen();
+        }
+
+        function playIntervalo(){
+            intervalo = setInterval(pasarFoto, timeIntervalo );
+        };
+        
+    }
+}
+
+
+        
+
+
+
+
 
  
-
-
-
 
 

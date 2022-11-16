@@ -118,8 +118,6 @@ p{
     width: 100%;
 }
 
-
-
 .enlace{
     color:var(---negro);
     font-weight: 700;
@@ -200,7 +198,6 @@ p{
     font-size: 1rem;
 }
 
-
 .portada-imagen{
     filter: brightness(40%);
     width: 100%;
@@ -216,6 +213,27 @@ p{
     .portada-texto h4{
         font-size:1.8rem;
     }
+}
+
+/* CARROUSEL */
+
+.carousel{
+
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 2rem;
+}
+
+
+#imagen{
+
+    width: 100%;
+    filter: brightness(80%);
+    height: 25rem;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 1rem 0;
 }
 
 
@@ -441,7 +459,7 @@ p{
     color:white;
     font-weight:bold;
     height:5rem;
-    width:18rem;
+    width:25rem;
     border-radius:2rem;
     text-shadow:2px 2px 2px rgb(0, 0, 0);
 }
