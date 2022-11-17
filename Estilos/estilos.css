@@ -223,6 +223,7 @@ p{
     margin: 0 auto;
     display: flex;
     padding: 0 2rem;
+    align-items: center;
 }
 
 
@@ -234,7 +235,47 @@ p{
     background-size:cover;
     background-repeat: no-repeat;
     padding: 1rem 0;
+    height: 100%;
 }
+
+.header-imagenes{
+    display: flex;
+    
+    
+}
+
+.primerBanner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.botonesCarousel{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: absolute;
+  
+}
+
+.botonCarousel{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+   background-color: antiquewhite;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   opacity: 50%;
+}
+
+
+
+
+
 
 
 /* NOSOTROS */
