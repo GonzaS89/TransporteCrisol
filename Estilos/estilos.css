@@ -94,8 +94,6 @@ p{
     
 }
 
-
-
 .header-navegacion{
     display: flex;
     align-items: center;
@@ -228,6 +226,10 @@ p{
     font-size: 1.5rem;
 }
 
+.nosotros p{
+    font-size: 1.2rem;
+}
+
 
 .nosotros-contenedor{
     display: flex;
@@ -291,7 +293,7 @@ p{
 
 .servicios-titulo{
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .servicios-contenedor{
@@ -315,7 +317,7 @@ p{
 
 .servicio h3{
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .servicio-img{
@@ -342,6 +344,23 @@ p{
         margin:0;
         width:20rem;
         height:20rem; 
+    }
+
+    .servicios-titulo{
+        font-size: 1rem;
+    }
+
+    .servicio h3{
+        font-size: 1.5rem;
+    }
+
+    .servicio p{
+font-size: 1rem;
+    }
+
+    .servicio-img{
+        width: 8rem;
+        height: 8rem;
     }
 }
 
@@ -532,7 +551,7 @@ p{
     font-size: 1rem;
 }
 
-@media (min-width:600px){
+@media (min-width:768px){
     .sucursal p{
         font-size: 1.5rem;
     }

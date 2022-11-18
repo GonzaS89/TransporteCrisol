@@ -71,7 +71,7 @@ function barraSmall(){
             logo.classList.remove('logo-barraSmall');
         }    
 });
-}
+};
 
 
 function resaltarEnlaceActivo(){
@@ -299,7 +299,7 @@ function mostrarFlete(){
 
  /* CARROUSEL DE IMAGENES*/
 
- function carrousel(){
+ function carrouselAutomatico(){
 
     window.onload = function(){
 
@@ -334,7 +334,14 @@ function mostrarFlete(){
         function playIntervalo(){
             intervalo = setInterval(pasarFoto, timeIntervalo );
         };
-        
+    }
+}
+
+/* SEGUNDA FUNCION PARA CAROUSEL DE IMAGENES*/
+
+ function carouselManual(){
+    window.onload = function(){
+
     }
 }
 
