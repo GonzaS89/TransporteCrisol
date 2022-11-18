@@ -225,6 +225,7 @@ p{
 
 .nosotros h1{
     text-align: center;
+    font-size: 1.5rem;
 }
 
 
@@ -236,7 +237,7 @@ p{
 }
 
 .nosotros-texto{
-    text-align: justify;    
+    text-align: justify;   
 }
 
 @media (max-width:480px){
@@ -290,6 +291,7 @@ p{
 
 .servicios-titulo{
     text-align: center;
+    font-size: 0.8rem;
 }
 
 .servicios-contenedor{
@@ -304,8 +306,8 @@ p{
     flex-direction: column;
     align-items: center;
     box-shadow: 3px 1px 20px rgb(0, 0, 0);
-    width:20rem;
-    height: 20rem; 
+    width:12rem;
+    height: 12rem; 
     overflow: hidden;
     margin-top: 2rem;
     border-radius: 3rem;
@@ -313,12 +315,13 @@ p{
 
 .servicio h3{
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .servicio-img{
     background-color: black;
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     border: .5rem solid var(---negro-claro);
     
@@ -326,7 +329,7 @@ p{
 
 .servicio p{
     text-align: center;  
-    font-size: 1.4rem;  
+    font-size: 0.7rem;  
 }
 
 @media (min-width:768px){
@@ -337,6 +340,8 @@ p{
     }
     .servicio{
         margin:0;
+        width:20rem;
+        height:20rem; 
     }
 }
 
@@ -357,10 +362,12 @@ p{
 
 .titulo-calculadora{
     text-align: center;
+    font-size: 0.7rem;
 }
 
 .calculadora h3{
     text-align: center;
+    font-size: 1rem;
 }
 
 .cuerpo-calc{
@@ -397,7 +404,7 @@ p{
 .boton{
     height: 3rem;
     width: 8rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
     background-color:rgb(255, 56, 56);
     color:white;
@@ -483,6 +490,7 @@ p{
 
 .contacto-titulo h1{
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .contacto-sucursales{
