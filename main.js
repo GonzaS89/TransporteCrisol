@@ -50,7 +50,7 @@ function navegacionFija(){
 
 /* BARRA SMALL */
 
-function barraSmall(){
+//function barraSmall(){
 
     window.addEventListener('scroll', function(){
 

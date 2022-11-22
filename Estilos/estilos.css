@@ -334,12 +334,16 @@ p{
     font-size: 0.7rem;  
 }
 
-@media (min-width:768px){
+@media (min-width:600px){
     .servicios-contenedor{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 2rem;
     }
+}
+
+@media (min-width:768px){
+    
     .servicio{
         margin:0;
         width:20rem;
