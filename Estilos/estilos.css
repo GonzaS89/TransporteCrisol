@@ -82,6 +82,11 @@ p{
 }
 
 
+.header-logo img{
+    height: 4rem;
+}
+
+
 .logo-barraSmall{
     display: flex;
     justify-content: center;
@@ -142,6 +147,10 @@ p{
        justify-content: space-around;
        left: 0;
        top:0;
+    }
+
+    .header-logo img{
+        height: 5.5rem;
     }
 
     .fija{
