@@ -29,7 +29,6 @@ body{
     }
 }
 
-
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
@@ -238,10 +237,9 @@ p{
     font-size: 1.5rem;
 }
 
-.nosotros p{
-    font-size: 1.2rem;
+.nosotros-texto p{
+    font-size: 1rem;
 }
-
 
 .nosotros-contenedor{
     display: flex;
@@ -254,9 +252,9 @@ p{
     text-align: justify;   
 }
 
-@media (max-width:480px){
+@media (min-width:600px){
     .nosotros-texto p{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -398,12 +396,12 @@ p{
 
 .titulo-calculadora{
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.55rem;
 }
 
 .calculadora h3{
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .cuerpo-calc{
@@ -496,6 +494,15 @@ p{
 }
 
  @media(min-width:768px){
+
+    .titulo-calculadora{
+        font-size: 0.7rem;
+    }
+
+    .calculadora h3{
+        font-size: 1rem;
+    }
+
     .resultado{
         width: 35rem;
     }

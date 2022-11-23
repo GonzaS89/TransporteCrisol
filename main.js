@@ -57,6 +57,7 @@ function barraSmall(){
         const barra = document.querySelector('.header-contenedor');
         const body = document.querySelector('body');
         const logo = document.querySelector('.header-logo');
+       
 
         if (body.getBoundingClientRect().right < 800 &  
              barra.getBoundingClientRect().bottom < 160) {
@@ -65,7 +66,6 @@ function barraSmall(){
              logo.classList.add('logo-barraSmall');
                 
            }
-
         else{
             logo.classList.remove('fija-2');
             logo.classList.remove('logo-barraSmall');
