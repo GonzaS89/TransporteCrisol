@@ -73,6 +73,16 @@ function barraSmall(){
 });
 }
 
+function barraSoloLogo(){
+
+    const barra = document.querySelector('.header-contenedor');
+    const enlaces = document.querySelector('.header-navegacion');
+    const body = document.querySelector('body');
+    barra.removeChild(enlaces)
+
+    
+}
+
 
 function resaltarEnlaceActivo(){
 
