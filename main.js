@@ -347,12 +347,7 @@ function mostrarFlete(){
         const timer = 3000;
         let intervalo;
 
-
-        imagenes[0] = imagen1;
-        imagenes[1] = imagen2;
-        
-
-        imagen2.src = './Imagenes/camion3.jpg';
+        imagen2.src = './Imagenes/carousel3.jpg';
 
 
         function cambiarImagen(){
