@@ -50,7 +50,7 @@ function navegacionFija(){
 
 /* BARRA SMALL */
 
-//function barraSmall(){
+function barraSmall(){
 
     window.addEventListener('scroll', function(){
 
@@ -299,13 +299,12 @@ function mostrarFlete(){
 
  /* CARROUSEL DE IMAGENES*/
 
- function carrouselAutomatico(){
+ 
 
     window.onload = function(){
 
         const imagenes = [
-            'Imagenes/carrousel1.png',
-            'Imagenes/carrousel2.png',
+            'Imagenes/camion3.jpg', 
             'Imagenes/carrousel3.png'
         ];
 
@@ -335,15 +334,51 @@ function mostrarFlete(){
             intervalo = setInterval(pasarFoto, timeIntervalo );
         };
     }
-}
+
 
 /* SEGUNDA FUNCION PARA CAROUSEL DE IMAGENES*/
 
- function carouselManual(){
-    window.onload = function(){
 
-    }
-}
+    window.onload = function carousel(){
+
+        const imagenes = document.querySelector('.portada-imagen');
+        const imagen1 = document.querySelector('.imagen1');
+        const imagen2 = document.createElement('IMG');
+        const timer = 3000;
+        let intervalo;
+
+
+        imagenes[0] = imagen1;
+        imagenes[1] = imagen2;
+        
+
+        imagen2.src = './Imagenes/camion3.jpg';
+
+
+        function cambiarImagen(){
+                imagenes.removeChild(imagen1);
+                imagenes.appendChild(imagen2);
+                setTimeout(() =>{
+                    imagenes.removeChild(imagen2);
+                    imagenes.appendChild(imagen1);
+                },3000)
+            }
+
+            function play(){
+            intervalo = setInterval(cambiarImagen,timer);
+            }
+            play()
+            
+            
+            
+        }
+
+       
+
+       
+        
+    
+
 
 
         

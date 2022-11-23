@@ -82,6 +82,11 @@ p{
 }
 
 
+.header-logo img{
+    height: 4rem;
+}
+
+
 .logo-barraSmall{
     display: flex;
     justify-content: center;
@@ -93,8 +98,6 @@ p{
     margin-bottom: 2rem;
     
 }
-
-
 
 .header-navegacion{
     display: flex;
@@ -144,6 +147,10 @@ p{
        justify-content: space-around;
        left: 0;
        top:0;
+    }
+
+    .header-logo img{
+        height: 5.5rem;
     }
 
     .fija{
@@ -203,6 +210,7 @@ p{
     width: 100%;
 }
 
+
 @media (min-width:600px) {
     .portada-texto h4{
         font-size:1.3rem;
@@ -215,69 +223,6 @@ p{
     }
 }
 
-/* CARROUSEL */
-
-.carousel{
-
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    padding: 0 2rem;
-    align-items: center;
-}
-
-
-#imagen{
-
-    width: 100%;
-    filter: brightness(80%);
-    height: 25rem;
-    background-size:cover;
-    background-repeat: no-repeat;
-    padding: 1rem 0;
-    height: 100%;
-}
-
-.header-imagenes{
-    display: flex;
-    
-    
-}
-
-.primerBanner{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-}
-
-.botonesCarousel{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    position: absolute;
-  
-}
-
-.botonCarousel{
-    display: flex;
-    align-items:center;
-    justify-content:center;
-   background-color: antiquewhite;
-   width: 4rem;
-   height: 4rem;
-   border-radius: 50%;
-   opacity: 50%;
-}
-
-
-
-
-
-
-
 /* NOSOTROS */
 
 .nosotros{
@@ -288,6 +233,11 @@ p{
 
 .nosotros h1{
     text-align: center;
+    font-size: 1.5rem;
+}
+
+.nosotros p{
+    font-size: 1.2rem;
 }
 
 
@@ -299,7 +249,7 @@ p{
 }
 
 .nosotros-texto{
-    text-align: justify;    
+    text-align: justify;   
 }
 
 @media (max-width:480px){
@@ -353,6 +303,7 @@ p{
 
 .servicios-titulo{
     text-align: center;
+    font-size: 0.75rem;
 }
 
 .servicios-contenedor{
@@ -367,8 +318,8 @@ p{
     flex-direction: column;
     align-items: center;
     box-shadow: 3px 1px 20px rgb(0, 0, 0);
-    width:20rem;
-    height: 20rem; 
+    width:12rem;
+    height: 12rem; 
     overflow: hidden;
     margin-top: 2rem;
     border-radius: 3rem;
@@ -376,12 +327,13 @@ p{
 
 .servicio h3{
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .servicio-img{
     background-color: black;
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     border: .5rem solid var(---negro-claro);
     
@@ -389,17 +341,40 @@ p{
 
 .servicio p{
     text-align: center;  
-    font-size: 1.4rem;  
+    font-size: 0.75rem;  
 }
 
-@media (min-width:768px){
+@media (min-width:600px){
     .servicios-contenedor{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 2rem;
     }
+}
+
+@media (min-width:768px){
+    
     .servicio{
         margin:0;
+        width:20rem;
+        height:20rem; 
+    }
+
+    .servicios-titulo{
+        font-size: 1rem;
+    }
+
+    .servicio h3{
+        font-size: 1.5rem;
+    }
+
+    .servicio p{
+    font-size: 1.2rem;
+    }
+
+    .servicio-img{
+        width: 8rem;
+        height: 8rem;
     }
 }
 
@@ -420,10 +395,12 @@ p{
 
 .titulo-calculadora{
     text-align: center;
+    font-size: 0.7rem;
 }
 
 .calculadora h3{
     text-align: center;
+    font-size: 1rem;
 }
 
 .cuerpo-calc{
@@ -460,7 +437,7 @@ p{
 .boton{
     height: 3rem;
     width: 8rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
     background-color:rgb(255, 56, 56);
     color:white;
@@ -546,6 +523,7 @@ p{
 
 .contacto-titulo h1{
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .contacto-sucursales{
@@ -587,7 +565,7 @@ p{
     font-size: 1rem;
 }
 
-@media (min-width:600px){
+@media (min-width:768px){
     .sucursal p{
         font-size: 1.5rem;
     }
