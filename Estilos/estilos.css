@@ -335,6 +335,7 @@ p{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 2rem;
+        font-size: 5rem;
     }
     .servicio{
         margin:0;
