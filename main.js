@@ -297,10 +297,39 @@ function mostrarFlete(){
     });
 }
 
- 
+
+/* SEGUNDA FUNCION PARA CAROUSEL DE IMAGENES*/
 
 
-        
+    window.onload = function carousel(){
+
+        const imagenes = document.querySelector('.portada-imagen');
+        const imagen1 = document.querySelector('.imagen1');
+        const imagen2 = document.createElement('IMG');
+        const timer = 3000;
+        let intervalo;
+
+        imagen2.src = './Imagenes/carousel3.jpg';
+
+
+        function cambiarImagen(){
+                imagenes.removeChild(imagen1);
+                imagenes.appendChild(imagen2);
+                setTimeout(() =>{
+                    imagenes.removeChild(imagen2);
+                    imagenes.appendChild(imagen1);
+                },3000)
+            }
+
+            function play(){
+            intervalo = setInterval(cambiarImagen,timer);
+            }
+            play()
+            
+            
+            
+        }
+       
 
 
        
