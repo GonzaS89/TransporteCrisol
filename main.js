@@ -297,53 +297,8 @@ function mostrarFlete(){
     });
 }
 
- /* CARROUSEL DE IMAGENES*/
 
- function carrouselAutomatico(){
 
-    window.onload = function(){
-
-        const imagenes = [
-            'Imagenes/carrousel1.png',
-            'Imagenes/carrousel2.png',
-            'Imagenes/carrousel3.png'
-        ];
-
-        let posicionActual = 0;
-        let imagen = document.querySelector('#imagen');
-        let intervalo;
-        const timeIntervalo = 5000;
-        const body = document.querySelector('body');
-
-        body.addEventListener('click', playIntervalo());
-
-        function cargarImagen(){
-
-            imagen.style.backgroundImage = `url(${imagenes[posicionActual]})`;
-        }
-
-        function pasarFoto() {
-            if(posicionActual >= imagenes.length - 1) {
-                posicionActual = 0;
-            } else {
-                posicionActual++;
-            }
-            cargarImagen();
-        }
-
-        function playIntervalo(){
-            intervalo = setInterval(pasarFoto, timeIntervalo );
-        };
-    }
-}
-
-/* SEGUNDA FUNCION PARA CAROUSEL DE IMAGENES*/
-
- function carouselManual(){
-    window.onload = function(){
-
-    }
-}
 
 
         
