@@ -7,8 +7,9 @@ function iniciarApp(){
     navegacionFija();
     resaltarEnlaceActivo();
     mostrarFlete();
-    barraSmall();
+    barraSmallMovil();
     carrousel();
+    aa();
 };
 
 function scrollNav(){
@@ -48,43 +49,44 @@ function navegacionFija(){
 });
 };
 
-/* BARRA SMALL */
+/*              BARRA SMALL           */
 
-function barraSmall(){
+function barraSmallMovil(){
 
-    window.addEventListener('scroll', function(){
+          const barra = document.querySelector('.header-contenedor');
+          const logo = document.querySelector('.header-logo');  
 
-        const barra = document.querySelector('.header-contenedor');
-        const body = document.querySelector('body');
-        const logo = document.querySelector('.header-logo');
-       
+         window.addEventListener('scroll', function(){
 
-        if (body.getBoundingClientRect().right < 800 &  
-             barra.getBoundingClientRect().bottom < 160) {
+        if (barra.getBoundingClientRect().top < 0) {
 
              logo.classList.add('fija-2');
              logo.classList.add('logo-barraSmall');
-                
            }
-        else{
+           else{
             logo.classList.remove('fija-2');
             logo.classList.remove('logo-barraSmall');
-        }    
-});
+        }
+}); 
 }
 
-function barraSoloLogo(){
+function barraVersatil(){
 
-    const barra = document.querySelector('.header-contenedor');
-    const enlaces = document.querySelector('.header-navegacion');
-    const body = document.querySelector('body');
-    barra.removeChild(enlaces)
+          const barra = document.querySelector('.header-contenedor');
+          const enlaces = document.querySelector('.header-navegacion');
 
-    
-}
+          let resolucionAlta = window.matchMedia("(min-width: 768px)");
+
+            if(resolucionAlta.matches){
+                barra.appendChild(enlaces);
+            } 
+    }
 
 
+window.addEventListener('resize',barraVersatil)
 
+
+/*            BARRA SMALL      */
 
 function resaltarEnlaceActivo(){
 
@@ -339,12 +341,7 @@ function mostrarFlete(){
             intervalo = setInterval(cambiarImagen,timer);
             }
             play()
-            
-            
-            
         }
-       
-
 
        
         
