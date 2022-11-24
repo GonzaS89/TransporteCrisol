@@ -84,6 +84,8 @@ function barraSoloLogo(){
 }
 
 
+
+
 function resaltarEnlaceActivo(){
 
     window.addEventListener('scroll', function(){
@@ -167,12 +169,13 @@ function mostrarFlete(){
 
             boton.disabled = true;
             boton1.classList.add('botonGris');
+            ingreso.style.borderColor = 'red';
             
             mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {
-            mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris');
+            mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.style.borderColor='';
              },3500)
         }
         else{
@@ -257,12 +260,13 @@ function mostrarFlete(){
                 
                 boton.disabled=true;
                 boton1.classList.add('botonGris');
+                ingresoVd.style.borderColor = 'red';
 
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris');
+                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';;
                 },3500); 
             }
             

@@ -450,7 +450,7 @@ p{
 
     height: 3rem;
     width: 8rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
     background-color:rgb(182, 175, 175);
     color:rgb(0, 0, 0);
@@ -487,10 +487,12 @@ p{
     display: flex;
     align-items:center;
     justify-content:center;
-    color:rgb(253, 69, 69);
+    color:rgb(255, 255, 255);
+    background-color: rgb(95, 95, 95);
     height:7.5rem;
     width:22rem;
     border-radius:2rem;
+    font-size: 1rem;
 }
 
  @media(min-width:768px){
