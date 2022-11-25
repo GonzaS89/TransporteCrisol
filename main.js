@@ -156,7 +156,7 @@ function mostrarFlete(){
             boton1.classList.add('botonGris');
             ingreso.style.borderColor = 'red';
             
-            mensaje.textContent = `El primer campo esta vacío o contiene un valor incorrecto. Ingrese un valor válido entre 1 y 1000`;
+            mensaje.textContent = `Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
             calculadora.appendChild(mensaje);
             setTimeout(() => {

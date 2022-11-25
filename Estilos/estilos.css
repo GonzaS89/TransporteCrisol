@@ -227,8 +227,15 @@ p{
 }
 
 .titulo{
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     text-align: center;
+    
+}
+
+@media (min-width: 480px){
+    .titulo{
+        font-size: 0.7rem;
+    }
     
 }
 
@@ -253,7 +260,7 @@ p{
 }
 
 .nosotros-texto p{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .nosotros-contenedor{
@@ -313,14 +320,12 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 6rem;
 }
 
 .servicios-contenedor{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
 }
 
 .servicio{
@@ -402,6 +407,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2rem 0 2rem 0;
 }
 
 .calculadora h3{
@@ -426,7 +432,7 @@ p{
 
 #kgs{
     height: 3rem;
-    width: 15rem;
+    width: 10rem;
     border-radius: 1rem;
     font-size: 1.7rem;
     text-align: center;
@@ -434,7 +440,7 @@ p{
 
 #valor{
     height: 3rem;
-    width: 15rem;
+    width: 10rem;
     border-radius: 1rem;
     font-size: 1.7rem;
     text-align: center;
@@ -442,7 +448,7 @@ p{
 
 .boton{
     height: 3rem;
-    width: 8rem;
+    width: 6rem;
     font-size: 1.2rem;
     border-radius: 1rem;
     background-color:rgb(255, 56, 56);
@@ -454,7 +460,7 @@ p{
 .botonGris{
 
     height: 3rem;
-    width: 8rem;
+    width: 6rem;
     font-size: 1.2rem;
     border-radius: 1rem;
     background-color:rgb(182, 175, 175);
@@ -483,8 +489,8 @@ p{
     color:white;
     font-weight:bold;
     font-size: 1rem;
-    height:5rem;
-    width:25rem;
+    height:4rem;
+    width:15rem;
     border-radius:2rem;
     text-shadow:2px 2px 2px rgb(0, 0, 0);
 }
@@ -495,10 +501,29 @@ p{
     justify-content:center;
     color:rgb(255, 255, 255);
     background-color: rgb(95, 95, 95);
-    height:7.5rem;
-    width:22rem;
+    height:6rem;
+    width:15rem;
     border-radius:2rem;
     font-size: 1rem;
+}
+
+@media (min-width: 480px){
+    #kgs{
+        width:15rem;
+    }
+    #valor{
+        width: 15rem;
+    }
+    .boton{
+        width:8rem;
+    }
+    .botonGris{
+        width:8rem;
+    }
+    .resultado{
+        width:25rem;
+
+    }
 }
 
  @media(min-width:768px){
