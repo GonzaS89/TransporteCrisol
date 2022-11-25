@@ -238,13 +238,18 @@ p{
     }
 }
 
+@media (min-width: 480px){
+   .titulo{
+    padding: 0 2rem 0 2rem;
+   }
+}
+
 /* NOSOTROS */
 
 .nosotros{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 0 6rem 0;
 }
 
 .nosotros-texto p{
@@ -309,11 +314,6 @@ p{
     flex-direction: column;
     align-items: center;
     padding-top: 6rem;
-}
-
-.servicios-titulo{
-    text-align: center;
-    font-size: 0.75rem;
 }
 
 .servicios-contenedor{
@@ -402,12 +402,6 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 0 6rem 0;
-}
-
-.titulo-calculadora{
-    text-align: center;
-    font-size: 0.55rem;
 }
 
 .calculadora h3{
@@ -544,11 +538,6 @@ p{
     align-items: center;
     justify-content: center;
     margin: 2rem 2rem;
-}
-
-.contacto-titulo h1{
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 .contacto-sucursales{
