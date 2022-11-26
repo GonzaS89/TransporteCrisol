@@ -81,7 +81,7 @@ p{
 
 
 .header-logo img{
-    height: 4rem;
+    height:2.5rem;
 }
 
 
@@ -133,6 +133,13 @@ p{
     transition: font-size .3s ease;
 }
 
+@media (min-width: 480px){
+    .header-logo img{
+        height: 4rem;
+        
+    }
+}
+
 @media (min-width: 768px){
     .header-logo img{
         height: 4.5rem;
@@ -140,7 +147,7 @@ p{
     
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
     .header-contenedor{
        background: rgb(255,255,255);
        background: linear-gradient(90deg, 
@@ -171,12 +178,14 @@ p{
     .enlace{
         padding: 0 .5rem;
         margin: 0 1rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .resaltado{
         font-size: 2rem;
     }
+
+
 
    
 }
@@ -271,7 +280,7 @@ p{
 }
 
 .nosotros-texto{
-    text-align: justify;   
+    text-align: center;   
 }
 
 @media (min-width:768px){
@@ -342,7 +351,7 @@ p{
 
 .servicio h3{
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 .servicio-img{
@@ -358,6 +367,13 @@ p{
     text-align: center;  
     font-size: 0.75rem;  
 }
+
+@media (min-width: 480px){
+    .servicio h3{
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (min-width:600px){
     .servicios-contenedor{
@@ -501,8 +517,8 @@ p{
     justify-content:center;
     color:rgb(255, 255, 255);
     background-color: rgb(95, 95, 95);
-    height:6rem;
-    width:15rem;
+    height:4.5rem;
+    width:16rem;
     border-radius:2rem;
     font-size: 1rem;
 }
@@ -521,8 +537,10 @@ p{
         width:8rem;
     }
     .resultado{
-        width:25rem;
-
+        width: 20rem;
+    }
+    .mensajeErro{
+        width:20rem;
     }
 }
 
@@ -542,7 +560,8 @@ p{
     }
     .mensajeError{
         height: 5rem;
-        width:35rem;
+        width:25rem;
+        font-size: 1.2rem;
     }
 } 
 
@@ -573,6 +592,8 @@ p{
 }
 
 
+
+
 @media (min-width:1600px){
     .contacto-sucursales{
         flex-direction: row;
@@ -596,17 +617,33 @@ p{
     justify-content: center;
     width: 100%;
 }
-.sucursal-texto h3, p{
+.sucursal-texto p{
     text-align:center;
 }
 
+.sucursal-texto h3{
+    font-size: 0.85rem;
+}
+
 .sucursal p{
-    font-size: 1rem;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 480px){
+    .sucursal-texto h3{
+        font-size: 1rem;
+    }
+    .sucursal p{
+        font-size: 1rem;
+    }
 }
 
 @media (min-width:768px){
     .sucursal p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .sucursal-texto h3{
+        font-size: 1.2rem;
     }
 }
 
@@ -641,9 +678,15 @@ p{
 
 .footer h3{
     color:var(---blanco);
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 1rem;
+}
+
+@media (min-width: 480px){
+    .footer h3{
+        font-size: 1rem;
+    }
 }
 
 
