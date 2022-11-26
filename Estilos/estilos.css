@@ -81,7 +81,7 @@ p{
 
 
 .header-logo img{
-    height:2.5rem;
+    height:2rem;
 }
 
 
@@ -102,7 +102,7 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem 0 1rem 0;
+    padding-bottom: 1rem;
     width: 100%;
 }
 
@@ -124,14 +124,11 @@ p{
     font-weight: 700;
     padding: .5rem 0;
     margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
-.enlace:hover{
-    font-size: 2rem;
-    transition: font-size .3s ease;
-}
+
 
 @media (min-width: 480px){
     .header-logo img{
@@ -147,7 +144,7 @@ p{
     
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     .header-contenedor{
        background: rgb(255,255,255);
        background: linear-gradient(90deg, 
@@ -184,6 +181,10 @@ p{
     .resaltado{
         font-size: 2rem;
     }
+    .enlace:hover{
+        font-size: 2rem;
+        transition: font-size .3s ease;
+    }
 
 
 
@@ -195,7 +196,7 @@ p{
 .portada{
     display:flex;
     align-items:flex-end;
-    padding: 0 2rem;
+ 
 }
 
 .portada-texto{
