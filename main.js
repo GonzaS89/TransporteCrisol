@@ -242,8 +242,7 @@ function mostrarFlete(){
                 resul=21671.50;
             }
         
-            
-            if(valorIngresoVd == '' || valorIngresoVd == 0){
+            if(valorIngresoVd == '' || valorIngresoVd == 0 || valorIngresoVd > 4000000){
                 
                 boton.disabled=true;
                 boton1.classList.add('botonGris');
@@ -253,7 +252,7 @@ function mostrarFlete(){
                 mensaje.classList.add('mensajeError');
                 calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';;
+                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';
                 },3500); 
             }
             
