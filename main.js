@@ -10,6 +10,7 @@ function iniciarApp(){
     barraSmallMovil();
     carrousel();
     barraSinLogo();
+    cambioDeInput()
 };
 
 function scrollNav(){
@@ -325,6 +326,9 @@ function mostrarFlete(){
             }
             play()
         }
+           
+           
+        
 
        
         
