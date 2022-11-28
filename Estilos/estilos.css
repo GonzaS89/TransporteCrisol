@@ -166,7 +166,7 @@ p{
         width: 100%;
     }
     .resaltado{
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 @media (min-width: 900px) {
@@ -178,6 +178,9 @@ p{
     .enlace:hover{
         font-size: 1.8rem;
         transition: font-size .3s ease;
+    }
+    .resaltado{
+        font-size: 1.5rem;
     }
 }
 
@@ -643,7 +646,7 @@ p{
 
 @media (min-width:600px){
     .servicios-contenedor{
-        column-gap: 1.69rem;
+        column-gap: 2rem;
     }
     .servicio{
         width:13rem;
@@ -665,55 +668,36 @@ p{
 
 @media (min-width:768px){
     .servicios-contenedor{
-        column-gap:2.08rem;
-    }
-    
+        grid-template-columns: repeat(4,1fr);
+        padding: 2rem;
+        column-gap: 1rem;
+ }
     .servicio{
-        width:16.9rem;
-        height:16.9rem; 
+        width:11rem;
+        height:11rem; 
     }
 
     .servicio h3{
-        font-size: 1.3rem;
+        font-size: 0.9rem;
     }
 
     .servicio p{
-    font-size: 1rem;
+    font-size: 0.7rem;
     }
 
     .servicio-img{
-        width: 6.76rem;
-        height: 6.76rem;
+        width:4.5rem;
+        height:4.5rem;
     }
 }
 
-
-@media (min-width:1600px) {
-    .servicios-contenedor{
-       grid-template-columns: repeat(4,1fr);
-}
-}
-
-
-
 /* CONTACTO */
-
-.contacto-contenedor{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 2rem;
-}
 
 .contacto-sucursales{
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
-    gap: 2rem;
 }
-
-
 
 .sucursal{
    display:flex;
@@ -765,27 +749,31 @@ p{
         font-size: 1.3rem;
     }
     .sucursal-ubicacion iframe{
-        width: 19.5rem;
-        height: 19.5rem;
+        width: 19rem;
+        height: 19rem;
     }
 }
 
-@media (min-width:768px){
-    .sucursal p{
-        font-size: 1.69rem;
-    }
-    .sucursal-texto h3{
-        font-size: 1.5rem;
-    }
-}
-@media (min-width:1600px){
+@media(min-width:768px){
     .contacto-sucursales{
         flex-direction: row;
         align-items: center;
-        justify-content:center;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
+    }
+
+    .sucursal p{
+        font-size: 0.9rem;
+    }
+    .sucursal-texto h3{
+        font-size: 0.9rem;
+    }
+    .sucursal-ubicacion iframe{
+        width: 15rem;
+        height: 15rem;
     }
 }
+
+
 
 /* LOGO WARAP */
 
