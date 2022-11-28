@@ -9,8 +9,7 @@ function iniciarApp(){
     mostrarFlete();
     barraSmallMovil();
     carrousel();
-    barraSinLogo();
-    cambioDeInput()
+    aa();
 };
 
 function scrollNav(){
@@ -59,7 +58,7 @@ function barraSmallMovil(){
 
          window.addEventListener('scroll', function(){
 
-            if (barra.getBoundingClientRect().top < 0) {
+        if (barra.getBoundingClientRect().top < 0) {
 
              logo.classList.add('fija-2');
              logo.classList.add('logo-barraSmall');
@@ -70,6 +69,7 @@ function barraSmallMovil(){
         }
 }); 
 }
+
 
 /*            BARRA SMALL      */
 
@@ -138,6 +138,7 @@ function resaltarEnlaceActivo(){
 
 function mostrarFlete(){
     const boton = document.getElementById('btn2');
+
 
     boton.addEventListener('click', function(){
         const calculadora = document.querySelector('.calculadora');
@@ -326,9 +327,6 @@ function mostrarFlete(){
             }
             play()
         }
-           
-           
-        
 
        
         
