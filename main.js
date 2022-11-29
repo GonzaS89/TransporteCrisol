@@ -289,10 +289,10 @@ function mostrarFlete(){
         const imagenes = document.querySelector('.portada-imagen');
         const imagen1 = document.querySelector('.imagen1');
         const imagen2 = document.createElement('IMG');
-        const timer = 3000;
+        const timer = 5000;
         let intervalo;
 
-        imagen2.src = './Imagenes/carousel3.jpg';
+        imagen2.src = './Imagenes/carrousel3.png';
 
 
         function cambiarImagen(){
@@ -301,7 +301,7 @@ function mostrarFlete(){
                 setTimeout(() =>{
                     imagenes.removeChild(imagen2);
                     imagenes.appendChild(imagen1);
-                },3000)
+                },5000)
             }
 
             function play(){
