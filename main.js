@@ -80,18 +80,18 @@ function resaltarEnlaceActivo(){
             const contactoConID = '#' + contacto.attributes.id.value;
             const calcConID = '#' + calculadora.attributes.id.value;
 
-            if (nosotros.getBoundingClientRect().top > 100){
+            if (nosotros.getBoundingClientRect().top > 75){
                 enlaceNos.classList.remove('resaltado')
             }
-            if(nosotros.getBoundingClientRect().top <= 150
-            && nosotros.getBoundingClientRect().bottom >= 150 
+            if(nosotros.getBoundingClientRect().top <= 75
+            && nosotros.getBoundingClientRect().bottom >= 150
             && enlaceValor == nosotrosConID)
             {
             enlaceNos.classList.add('resaltado')
             enlaceCalc.classList.remove('resaltado');
             }
-            if (calculadora.getBoundingClientRect().top <= 150 
-           && calculadora.getBoundingClientRect().bottom >= 150 
+            if (calculadora.getBoundingClientRect().top <= 75
+           && calculadora.getBoundingClientRect().bottom >= 75 
            && enlaceValor == calcConID){
 
             enlaceServ.classList.remove('resaltado');
@@ -124,7 +124,7 @@ function mostrarFlete(){
 
 
     boton.addEventListener('click', function(){
-        const calculadora = document.querySelector('.calculadora');
+        const cuerpoC = document.querySelector('.cuerpo-calc');
         const ingreso = document.getElementById('kgs');
         const ingresoVd = document.getElementById('valor')
         const valorIngresoVd = ingresoVd.value;
@@ -143,7 +143,7 @@ function mostrarFlete(){
             
             mensaje.textContent = `Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
-            calculadora.appendChild(mensaje);
+            cuerpoC.appendChild(mensaje);
             setTimeout(() => {
             mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.style.borderColor='';
              },3500)
@@ -233,7 +233,7 @@ function mostrarFlete(){
 
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
-                calculadora.appendChild(mensaje);
+                cuerpoC.appendChild(mensaje);
                 setTimeout(() => {
                 mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';
                 },3500); 
@@ -253,7 +253,7 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        calculadora.appendChild(mensaje);
+                        cuerpoC.appendChild(mensaje);
                         setTimeout(() => {
                         mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');
                      },5000)
@@ -269,7 +269,7 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        calculadora.appendChild(mensaje);
+                        cuerpoC.appendChild(mensaje);
                         setTimeout(() => {
                         mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
