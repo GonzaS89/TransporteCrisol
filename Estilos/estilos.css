@@ -688,21 +688,18 @@ p{
         height:4.5rem;
     }
 }
-
-@media (min-width: 900px){
-    .servicios-contenedor{
-        column-gap: 2rem;
-    }
+@media (min-width:900px){
     .servicio{
         width:13rem;
         height:13rem; 
     }
+
     .servicio h3{
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .servicio p{
-    font-size: 0.9rem;
+    font-size:0.85rem;
     }
 
     .servicio-img{
@@ -794,6 +791,9 @@ p{
 }
 
 @media (min-width: 900px){
+    .contacto-sucursales{
+        justify-content: space-around;
+    }
     .sucursal p{
         font-size: 1rem;
     }
@@ -801,11 +801,10 @@ p{
         font-size: 1rem;
     }
     .sucursal-ubicacion iframe{
-        width: 16.5rem;
-        height: 16.5rem;
+        width: 20rem;
+        height: 16rem;
     }
 }
-
 
 
 /* LOGO WARAP */
