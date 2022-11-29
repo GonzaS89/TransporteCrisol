@@ -51,24 +51,7 @@ function navegacionFija(){
 
 /*              BARRA SMALL           */
 
-function barraSmallMovil(){
 
-          const barra = document.querySelector('.header-contenedor');
-          const logo = document.querySelector('.header-logo');  
-
-         window.addEventListener('scroll', function(){
-
-        if (barra.getBoundingClientRect().top < 0) {
-
-             logo.classList.add('fija-2');
-             logo.classList.add('logo-barraSmall');
-           }
-           else{
-            logo.classList.remove('fija-2');
-            logo.classList.remove('logo-barraSmall');
-        }
-}); 
-}
 
 
 /*            BARRA SMALL      */
@@ -272,7 +255,7 @@ function mostrarFlete(){
                         mensaje.classList.add('resultado');
                         calculadora.appendChild(mensaje);
                         setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');
                      },5000)
                 
                 }
