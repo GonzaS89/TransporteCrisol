@@ -207,53 +207,33 @@ p{
 /* PORTADA */
 
 .portada{
-    
     display: flex;
+    max-height: 450px;
+    background-color: black;
 }
+
 
 
 .portada-imagen{
-    filter: brightness(40%);
     display:flex;
     align-items: center;
     justify-content:center;
-    max-height: 200px;
- 
-}
-.imagen1{
-    display: flex;
-    
-}
-.portada-imagen img{
-    width: 100%;
-    background-size:contain;
-}
+    filter:brightness(50%);
+    overflow: hidden;
 
 
-
-@media (min-width:600px) {
-    .portada-texto h4{
-        font-size:1.3rem;
+}
+@media(max-width:767px){
+    .portada{
+    height: 300px;
     }
 }
-
 @media (min-width:768px) {
-    .portada{    
-     background-color:black;   
-    }
-    .portada-texto h4{
-        font-size:1.8rem;
-    }
-    .portada-imagen{
+    .portada{
         margin: 0 2rem;
-        padding:2rem 0; 
     }
 }
-@media(min-width:1100px){
-    .portada{ 
-        width:80%;
-    }
-}
+
 
 
 .titulo h1{
@@ -262,18 +242,20 @@ p{
 }
 
 @media (min-width: 480px){
-    .titulo h1{
+       .titulo h1{
         font-size: 1.1rem;
         padding: 0 2rem 0 2rem;
     }
     
 }
 @media (min-width: 768px){
+
     .titulo h1{
         font-size: 1.2rem;
     }
 }
 @media (min-width:900px){
+
     .titulo h1{
         font-size: 1.3rem;
     }
@@ -314,6 +296,11 @@ p{
 
 .nosotros-texto{
     text-align: center; 
+ }
+ .nosotros-img img{
+    max-height: 300px;
+    filter: brightness(75%);
+    border-radius: 1rem;
  }
 @media (min-width: 480px){
     .nosotros-texto p{
@@ -367,11 +354,6 @@ p{
 .serv-text:hover{
     background-color:black;
 }
-.nosotros img{
-    border-radius: 1rem;
-    filter: brightness(50%);
-}
-
 
 /* CALCULADORA */
 

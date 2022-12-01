@@ -292,7 +292,7 @@ function mostrarFlete(){
         const timer = 5000;
         let intervalo;
 
-        imagen2.src = './Imagenes/carrousel3.png';
+        imagen2.src = './Imagenes/camion1.jpg';
 
 
         function cambiarImagen(){
