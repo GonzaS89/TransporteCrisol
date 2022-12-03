@@ -9,7 +9,8 @@ function iniciarApp(){
     mostrarFlete();
     barraSmallMovil();
     carrousel();
-    aa();
+    barraSinLogo();
+    cambioDeInput()
 };
 
 function scrollNav(){
@@ -49,6 +50,34 @@ function navegacionFija(){
 });
 };
 
+/*              BARRA SMALL           */
+
+function barraSmallMovil(){
+
+          const barra = document.querySelector('.header-contenedor');
+          const logo = document.querySelector('.header-logo'); 
+          const enlaces = document.querySelector('.header-navegacion'); 
+
+         window.addEventListener('scroll', function(){
+
+            if (barra.getBoundingClientRect().top < 0) {
+
+             logo.classList.add('fija-2');
+             logo.classList.add('logo-barraSmall');
+           }
+           else{
+            logo.classList.remove('fija-2');
+            logo.classList.remove('logo-barraSmall');
+        }
+
+       
+
+    
+}); 
+}
+
+/*            BARRA SMALL      */
+
 function resaltarEnlaceActivo(){
 
     window.addEventListener('scroll', function(){
@@ -73,18 +102,18 @@ function resaltarEnlaceActivo(){
             const contactoConID = '#' + contacto.attributes.id.value;
             const calcConID = '#' + calculadora.attributes.id.value;
 
-            if (nosotros.getBoundingClientRect().top > 75){
+            if (nosotros.getBoundingClientRect().top > 100){
                 enlaceNos.classList.remove('resaltado')
             }
-            if(nosotros.getBoundingClientRect().top <= 75
-            && nosotros.getBoundingClientRect().bottom >= 150
+            if(nosotros.getBoundingClientRect().top <= 150
+            && nosotros.getBoundingClientRect().bottom >= 150 
             && enlaceValor == nosotrosConID)
             {
             enlaceNos.classList.add('resaltado')
             enlaceCalc.classList.remove('resaltado');
             }
-            if (calculadora.getBoundingClientRect().top <= 75
-           && calculadora.getBoundingClientRect().bottom >= 75 
+            if (calculadora.getBoundingClientRect().top <= 150 
+           && calculadora.getBoundingClientRect().bottom >= 150 
            && enlaceValor == calcConID){
 
             enlaceServ.classList.remove('resaltado');
@@ -115,9 +144,8 @@ function resaltarEnlaceActivo(){
 function mostrarFlete(){
     const boton = document.getElementById('btn2');
 
-
     boton.addEventListener('click', function(){
-        const cuerpoC = document.querySelector('.cuerpo-calc');
+        const calculadora = document.querySelector('.calculadora');
         const ingreso = document.getElementById('kgs');
         const ingresoVd = document.getElementById('valor')
         const valorIngresoVd = ingresoVd.value;
@@ -136,7 +164,7 @@ function mostrarFlete(){
             
             mensaje.textContent = `Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
-            cuerpoC.appendChild(mensaje);
+            calculadora.appendChild(mensaje);
             setTimeout(() => {
             mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.style.borderColor='';
              },3500)
@@ -218,7 +246,8 @@ function mostrarFlete(){
                 resul=21671.50;
             }
         
-            if(valorIngresoVd == '' || valorIngresoVd == 0 || valorIngresoVd > 4000000){
+            
+            if(valorIngresoVd == '' || valorIngresoVd == 0){
                 
                 boton.disabled=true;
                 boton1.classList.add('botonGris');
@@ -226,9 +255,9 @@ function mostrarFlete(){
 
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
-                cuerpoC.appendChild(mensaje);
+                calculadora.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';
+                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';;
                 },3500); 
             }
             
@@ -246,9 +275,9 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        cuerpoC.appendChild(mensaje);
+                        calculadora.appendChild(mensaje);
                         setTimeout(() => {
-                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');
+                        mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
                 
                 }
@@ -262,7 +291,7 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        cuerpoC.appendChild(mensaje);
+                        calculadora.appendChild(mensaje);
                         setTimeout(() => {
                         mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
@@ -279,48 +308,32 @@ function mostrarFlete(){
 
     window.onload = function carousel(){
 
-       
-        const contImg = document.querySelector('.imagen1');
+        const imagenes = document.querySelector('.portada-imagen');
+        const imagen1 = document.querySelector('.imagen1');
         const imagen2 = document.createElement('IMG');
-
-        const timer = 5000;
+        const timer = 3000;
         let intervalo;
-        imagen1 = contImg.children[0];
-        imagen2.src = './Imagenes/log2.png';
+
+        imagen2.src = './Imagenes/carousel3.jpg';
 
 
         function cambiarImagen(){
-                contImg.removeChild(imagen1);
-                contImg.appendChild(imagen2);
+                imagenes.removeChild(imagen1);
+                imagenes.appendChild(imagen2);
                 setTimeout(() =>{
-                    contImg.removeChild(imagen2);
-                    contImg.appendChild(imagen1);
-                },5000)
+                    imagenes.removeChild(imagen2);
+                    imagenes.appendChild(imagen1);
+                },3000)
             }
 
             function play(){
             intervalo = setInterval(cambiarImagen,timer);
             }
             play()
-    }
-
-    /*              BARRA SMALL           */
-
-function barraSmallMovil(){
-    const header = document.querySelector('.header-contenedor');
-    const body = document.querySelector('body');
-    window.addEventListener('scroll', function(){
-        if(header.getBoundingClientRect().bottom >= 0 ){
-            header.classList.add('fija-2');
         }
-        else{
-            header.classList.remove('fija-2');
-
-        }
-    })
-}
-
-/*            BARRA SMALL      */
+           
+           
+        
 
        
         
