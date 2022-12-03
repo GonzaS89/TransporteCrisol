@@ -286,21 +286,22 @@ function mostrarFlete(){
 
     window.onload = function carousel(){
 
-        const imagenes = document.querySelector('.portada-imagen');
-        const imagen1 = document.querySelector('.imagen1');
+       
+        const contImg = document.querySelector('.imagen1');
         const imagen2 = document.createElement('IMG');
+
         const timer = 5000;
         let intervalo;
-
-        imagen2.src = './Imagenes/camion1.jpg';
-
+        imagen1 = contImg.children[0];
+        imagen2.src = './Imagenes/log2.png';
+    
 
         function cambiarImagen(){
-                imagenes.removeChild(imagen1);
-                imagenes.appendChild(imagen2);
+                contImg.removeChild(imagen1);
+                contImg.appendChild(imagen2);
                 setTimeout(() =>{
-                    imagenes.removeChild(imagen2);
-                    imagenes.appendChild(imagen1);
+                    contImg.removeChild(imagen2);
+                    contImg.appendChild(imagen1);
                 },5000)
             }
 
