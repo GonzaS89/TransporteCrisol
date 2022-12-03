@@ -49,13 +49,6 @@ function navegacionFija(){
 });
 };
 
-/*              BARRA SMALL           */
-
-
-
-
-/*            BARRA SMALL      */
-
 function resaltarEnlaceActivo(){
 
     window.addEventListener('scroll', function(){
@@ -294,7 +287,7 @@ function mostrarFlete(){
         let intervalo;
         imagen1 = contImg.children[0];
         imagen2.src = './Imagenes/log2.png';
-    
+
 
         function cambiarImagen(){
                 contImg.removeChild(imagen1);
@@ -309,7 +302,25 @@ function mostrarFlete(){
             intervalo = setInterval(cambiarImagen,timer);
             }
             play()
+    }
+
+    /*              BARRA SMALL           */
+
+function barraSmallMovil(){
+    const header = document.querySelector('.header-contenedor');
+    const body = document.querySelector('body');
+    window.addEventListener('scroll', function(){
+        if(header.getBoundingClientRect().bottom >= 0 ){
+            header.classList.add('fija-2');
         }
+        else{
+            header.classList.remove('fija-2');
+
+        }
+    })
+}
+
+/*            BARRA SMALL      */
 
        
         
