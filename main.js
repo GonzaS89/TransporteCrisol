@@ -70,9 +70,6 @@ function barraSmallMovil(){
             logo.classList.remove('logo-barraSmall');
         }
 
-       
-
-    
 }); 
 }
 
