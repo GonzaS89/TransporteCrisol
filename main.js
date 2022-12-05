@@ -64,6 +64,7 @@ function barraSmallMovil(){
 
              logo.classList.add('fija-2');
              logo.classList.add('logo-barraSmall');
+            
            }
            else{
             logo.classList.remove('fija-2');
@@ -71,6 +72,10 @@ function barraSmallMovil(){
         }
 
 }); 
+}
+
+function mostrarBarra(){
+
 }
 
 /*            BARRA SMALL      */
@@ -305,22 +310,22 @@ function mostrarFlete(){
 
     window.onload = function carousel(){
 
-        const imagenes = document.querySelector('.portada-imagen');
-        const imagen1 = document.querySelector('.imagen1');
+        const imagenes = document.querySelector('.imagen1');
+        const imagen = imagenes.children[0];
         const imagen2 = document.createElement('IMG');
-        const timer = 3000;
+        const imagen3 = document.createElement('IMG');
+        imagen2.src = './Imagenes/log2.png';
+        imagen3.src = './Imagenes/carrousel1.png';
+        const timer = 5000;
         let intervalo;
 
-        imagen2.src = './Imagenes/log2.png';
-
-
         function cambiarImagen(){
-                imagenes.removeChild(imagen1);
+                imagenes.removeChild(imagen)
                 imagenes.appendChild(imagen2);
                 setTimeout(() =>{
                     imagenes.removeChild(imagen2);
-                    imagenes.appendChild(imagen1);
-                },3000)
+                    imagenes.appendChild(imagen);
+                },5000);
             }
 
             function play(){
