@@ -221,14 +221,17 @@ p{
     max-height: 600px;
     overflow:hidden;
     background-color:black;
+    padding: 0.5rem 0;
+
 }
 @media(min-width:768px){
     .imagen1{
         margin:2rem;
+        padding: 1rem;
         border-radius:1rem;
+       
     }
 }
-
 .imagen1 img{
     filter:brightness(50%);
 }
