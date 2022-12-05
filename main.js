@@ -8,7 +8,7 @@ function iniciarApp(){
     resaltarEnlaceActivo();
     mostrarFlete();
     barraSmallMovil();
-    carrousel();
+    carousel();
     barraSinLogo();
     cambioDeInput()
 };
@@ -142,7 +142,7 @@ function mostrarFlete(){
     const boton = document.getElementById('btn2');
 
     boton.addEventListener('click', function(){
-        const calculadora = document.querySelector('.calculadora');
+        const cuerpoC = document.querySelector('.cuerpo-calc');
         const ingreso = document.getElementById('kgs');
         const ingresoVd = document.getElementById('valor')
         const valorIngresoVd = ingresoVd.value;
@@ -161,7 +161,7 @@ function mostrarFlete(){
             
             mensaje.textContent = `Ingrese un valor válido entre 1 y 1000`;
             mensaje.classList.add('mensajeError');
-            calculadora.appendChild(mensaje);
+            cuerpoC.appendChild(mensaje);
             setTimeout(() => {
             mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.style.borderColor='';
              },3500)
@@ -252,7 +252,7 @@ function mostrarFlete(){
 
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
-                calculadora.appendChild(mensaje);
+                cuerpoC.appendChild(mensaje);
                 setTimeout(() => {
                 mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'), ingresoVd.style.borderColor = '';;
                 },3500); 
@@ -272,7 +272,7 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        calculadora.appendChild(mensaje);
+                        cuerpoC.appendChild(mensaje);
                         setTimeout(() => {
                         mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
@@ -288,7 +288,7 @@ function mostrarFlete(){
             
                         mensaje.textContent = `El valor de tu envío sería de $ ${totalRed} + impuestos`;
                         mensaje.classList.add('resultado');
-                        calculadora.appendChild(mensaje);
+                        cuerpoC.appendChild(mensaje);
                         setTimeout(() => {
                         mensaje.remove(); ingreso.value = '', ingresoVd.value = '',boton.disabled=false,boton1.classList.remove('botonGris');;
                      },5000)
@@ -311,7 +311,7 @@ function mostrarFlete(){
         const timer = 3000;
         let intervalo;
 
-        imagen2.src = './Imagenes/carousel3.jpg';
+        imagen2.src = './Imagenes/log2.png';
 
 
         function cambiarImagen(){
