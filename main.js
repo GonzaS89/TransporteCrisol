@@ -308,34 +308,7 @@ function mostrarFlete(){
 /* SEGUNDA FUNCION PARA CAROUSEL DE IMAGENES*/
 
 
-    window.onload = function carousel(){
-
-        const imagenes = document.querySelector('.imagen1');
-        const imagen = imagenes.children[0];
-        const imagen2 = document.createElement('IMG');
-        const imagen3 = document.createElement('IMG');
-        imagen2.src = './Imagenes/log2.png';
-        imagen3.src = './Imagenes/carrousel1.png';
-        const timer = 5000;
-        let intervalo;
-
-        function cambiarImagen(){
-                imagenes.removeChild(imagen)
-                imagenes.appendChild(imagen2);
-                setTimeout(() =>{
-                    imagenes.removeChild(imagen2);
-                    imagenes.appendChild(imagen);
-                },5000);
-            }
-
-            function play(){
-            intervalo = setInterval(cambiarImagen,timer);
-            }
-            play()
-        }
-           
-           
-        
+   
 
        
         
