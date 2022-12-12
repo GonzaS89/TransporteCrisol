@@ -509,6 +509,12 @@ p{
     margin-bottom: 0;
 }
 
+.inputError{
+    background: rgba(174, 174, 174, 0.511);
+    transition: background 1.5s;
+}
+
+
 @media (min-width: 480px){
     .cuerpo-calc h2{
         font-size: 0.93rem;
