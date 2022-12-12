@@ -95,11 +95,8 @@ p{
 }
 
 .header-navegacion{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 1rem;
+    display: none;
+    
 }
 
 .navegacionSmall{
@@ -162,9 +159,12 @@ p{
         top:0;
      }
      .header-navegacion{
-        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: row;
         padding: 2rem 2rem 0 0;
+        margin: 0 1rem;
     }
     .enlace{
         font-size:1rem;
