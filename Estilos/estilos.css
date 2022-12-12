@@ -531,7 +531,7 @@ p{
         height: 2.75rem;
     }
     .mensajeError{
-        width:18rem;
+        width:19.5rem;
         font-size: 0.9rem;
 
     }
@@ -578,6 +578,7 @@ p{
     }
     .mensajeError{
         width:25rem;
+        height: 3.5rem;
         font-size: 1rem;
     }
 
@@ -615,7 +616,7 @@ p{
     }
     .mensajeError{
         height: 3.5rem;
-        width:25rem;
+        width:26rem;
         font-size: 1.1rem;
     }
     .boton{
