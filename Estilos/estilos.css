@@ -417,6 +417,8 @@ p{
     border: none;
     border-bottom: 2px solid red;
     outline: none;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
 
@@ -429,16 +431,18 @@ p{
     border: none;
     outline: none;
     border-bottom: 2px solid red;    
+    background-color: transparent;
+    border-radius: 5px;
 }
 
 #kgs:focus{
     border-bottom: 3px solid black;
-    transition:border-bottom 1s;
+    transition:border-bottom .5s;
 
 }
 #valor:focus{
     border-bottom: 3px solid black;
-    transition: border-bottom 1s;
+    transition: border-bottom .5s;
 }
 ::placeholder{
     font-size: 0.9rem;

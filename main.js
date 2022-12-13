@@ -163,12 +163,13 @@ function mostrarFlete(){
 
             boton.disabled = true;
             boton1.classList.add('botonGris');
-            ingreso.classList.add('inputError');
+            ingreso.style.background = 'lightgrey';
+            ingreso.style.border = 'none'
             mensaje.textContent = `Ingrese un valor válido entre 1 y 1000 en el primer campo`;
             mensaje.classList.add('mensajeError');
             cuerpoC.appendChild(mensaje);
             setTimeout(() => {
-            mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.classList.remove('inputError');
+            mensaje.remove(),boton.disabled=false,boton1.classList.remove('botonGris'),ingreso.style.background = '',ingreso.style.border = '';
              },3500)
         }
         else{
@@ -253,13 +254,13 @@ function mostrarFlete(){
                 
                 boton.disabled=true;
                 boton1.classList.add('botonGris');
-                ingresoVd.style.borderColor = 'red';
-                ingresoVd.classList.add('inputError');
+                ingresoVd.style.background = 'lightgrey';
+                ingresoVd.style.border = 'none'
                 mensaje.textContent = 'Ingrese un valor válido en el segundo campo';
                 mensaje.classList.add('mensajeError');
                 cuerpoC.appendChild(mensaje);
                 setTimeout(() => {
-                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'),ingresoVd.classList.remove('inputError');;
+                mensaje.remove(),boton.disabled=false, boton1.classList.remove('botonGris'),ingresoVd.style.background = '',ingresoVd.style.border = '';
                 },3500); 
             }
             
